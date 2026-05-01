@@ -1,13 +1,12 @@
 "use client";
 import { useState } from "react";
 import { Button, Link } from "@heroui/react";
-import { Geist } from "next/font/google";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   
   return (
-    <div className="sticky top-4 z-40 w-11/12 mx-auto">
+    <div className="sticky top-4 z-40 w-11/12 mx-auto pb-6">
       <nav className="px-5 shadow-md  rounded-md bg-transparent border-2 border-green-500">
         <header className="flex h-16 items-center justify-between px-6">
           <div className="flex items-center gap-4">
@@ -50,7 +49,7 @@ const Navbar = () => {
                 <Link href="/">Home</Link>
               </li>
               <li>
-                <Link href="/animals">All Animals</Link>
+                <Link href="/allanimals">All Animals</Link>
               </li>
             </ul>
           </div>
