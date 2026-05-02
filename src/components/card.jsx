@@ -1,37 +1,47 @@
 import { Button } from "@heroui/react";
+import Link from "next/link";
 
 const Card = ({ animal }) => {
   return (
-    <div
+    <section
       key={animal.id}
-      className="relative max-w-xs h-72 overflow-hidden rounded-2xl shadow-lg group bg-black/5"
+      className="relative max-w-xs h-72 overflow-hidden rounded-3xl 
+             bg-white/5 backdrop-blur-md border border-white/10
+             shadow-lg transition-all duration-500
+             hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/40"
     >
       <img
         src={animal.image}
-        alt={animal.name}
-        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+        alt=""
+        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
       />
 
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-
-      <div className="absolute bottom-0 w-full p-4 text-white space-y-1">
-        <h2 className="text-xl font-bold tracking-wide">{animal.name}</h2>
+      <div className="absolute bottom-0 w-full p-4 text-white space-y-2">
+        <h2 className="text-xl font-extrabold tracking-wide drop-shadow-md">
+          {animal.name}
+        </h2>
 
         <div className="flex items-center justify-between text-sm text-gray-200">
-          <p className="font-medium text-white">৳{animal.price}</p>
-          <p>Age: {animal.age}</p>
+          <p className="font-semibold text-white text-base">৳{animal.price}</p>
+          <p className="bg-white/10 px-2 py-0.5 rounded-full text-xs backdrop-blur">
+            Age: {animal.age}
+          </p>
         </div>
 
-        <button
-          className="mt-3 p-2 w-full rounded-lg border border-white/60 
-                       text-white text-sm font-medium
-                       hover:bg-white hover:text-black
-                       transition-all duration-300"
-        >
-          Details
-        </button>
+        <Link href={`/allanimals/${animal.id}`}>
+          <button
+            className="mt-3 w-full py-2 rounded-xl 
+                   bg-white/10 backdrop-blur-md border border-white/20
+                   text-white text-sm font-semibold
+                   hover:bg-white hover:text-black
+                   transition-all duration-300
+                  "
+          >
+            View Details →
+          </button>
+        </Link>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -8,7 +8,7 @@
         "weight": 500,
         "age": 6,
         "location": "Dhaka",
-        "description": "Healthy imported camel suitable for Qurbani in Bangladesh. Strong build, well-maintained, and fed with quality الغذ্য. Ideal for large سهم (share).",
+        "description": "Healthy imported camel suitable for Qurbani. Strong build, well-maintained, and fed with quality fodder. Ideal for large shares.",
         "image": "https://saudipedia.com/var/site/storage/images/6/0/6/3/2293606-1-eng-GB/5cc0172c1068-176295.jpg",
         "category": "Large Animal"
     },
@@ -21,7 +21,7 @@
         "weight": 320,
         "age": 4,
         "location": "Chattogram",
-        "description": "Premium red cattle known for tasty meat and strong body.",
+        "description": "Premium red cattle known for high-quality meat and a strong, healthy body.",
         "image": "https://khamarguru.com/images/bull/1.high-breed-cow-selection/RCC.jpg",
         "category": "Large Animal"
     },
@@ -29,12 +29,12 @@
         "id": 3,
         "name": "Pabna Strong Bull",
         "type": "Cow",
-        "breed": "Pabna",
+        "breed": "Local Pabna",
         "price": 150000,
         "weight": 300,
         "age": 3,
         "location": "Pabna",
-        "description": "Healthy and strong bull from Pabna region, ideal for Qurbani.",
+        "description": "Healthy and strong bull from the Pabna region, specifically raised for Qurbani.",
         "image": "https://elements-resized.envatousercontent.com/elements-video-cover-images/files/4a3c11f3-26ec-4a23-a25f-2471fee8f7c6/inline_image_preview.jpg?w=1200&h=630&cf_fit=crop&q=85&format=jpeg&s=2a5b95432baeea5065f208e02ed711206558a9ae2c2add3e2c20c55571e67e85",
         "category": "Large Animal"
     },
@@ -47,7 +47,7 @@
         "weight": 310,
         "age": 4,
         "location": "Munshiganj",
-        "description": "Famous white cow known for premium meat quality.",
+        "description": "Famous white cattle breed from Munshiganj, prized for its premium meat quality.",
         "image": "https://i.redd.it/the-worlds-most-expensive-cow-was-solo-in-brazil-for-around-v0-h5n1pofd46xg1.jpg?width=1200&format=pjpg&auto=webp&s=6afb8e20eed53111489ae83d9a3fa19484702ede",
         "category": "Large Animal"
     },
@@ -60,7 +60,7 @@
         "weight": 450,
         "age": 5,
         "location": "Sirajganj",
-        "description": "Huge crossbreed bull with high meat yield.",
+        "description": "Massive crossbreed bull with high meat yield and excellent health.",
         "image": "https://brcutrer.com/wp-content/uploads/2024/03/BRC-Money-Dont-Jiggle-240-1024x683.jpg",
         "category": "Large Animal"
     },
@@ -73,7 +73,7 @@
         "weight": 25,
         "age": 2,
         "location": "Khulna",
-        "description": "Popular goat breed in Bangladesh, tender meat and small size.",
+        "description": "The most popular goat breed in Bangladesh, known for tender and flavorful meat.",
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSptrQWVadhtTa837LjdeN65Xsqe_3X42GdMg&s",
         "category": "Small Animal"
     },
@@ -86,7 +86,7 @@
         "weight": 30,
         "age": 2,
         "location": "Tangail",
-        "description": "Healthy fat goat from Jamuna basin region.",
+        "description": "Well-fed, healthy goat from the Jamuna River basin region.",
         "image": "https://framerusercontent.com/images/I9gONaz61tx0puPeVLYoHRlxyNU.webp",
         "category": "Small Animal"
     },
@@ -99,7 +99,7 @@
         "weight": 20,
         "age": 2,
         "location": "Rajshahi",
-        "description": "Local sheep with soft and tasty meat.",
+        "description": "Local sheep with soft texture and delicious meat. Budget-friendly Qurbani option.",
         "image": "https://images.unsplash.com/photo-1484557985045-edf25e08da73?auto=format&fit=crop&q=80&w=1000",
         "category": "Small Animal"
     },
@@ -112,7 +112,7 @@
         "weight": 35,
         "age": 3,
         "location": "Dhaka",
-        "description": "Premium looking goat with long hair and large body.",
+        "description": "Premium goat with a large frame and long hair, offering a majestic look.",
         "image": "https://t4.ftcdn.net/jpg/04/78/75/65/360_F_478756592_XAxFW6h2ISLtz9Fgzm3xHCbPgtSh5Tzo.jpg",
         "category": "Small Animal"
     },
@@ -125,7 +125,7 @@
         "weight": 350,
         "age": 4,
         "location": "Sirajganj",
-        "description": "Strong and heavy bull, ideal for group Qurbani.",
+        "description": "Strong and heavy bull, ideal for shared group Qurbani.",
         "image": "https://cax-wp-farmers-prod-uploads.s3.amazonaws.com/app/uploads/2025/07/Boran-bull-1.jpg",
         "category": "Large Animal"
     },
@@ -138,7 +138,7 @@
         "weight": 270,
         "age": 3,
         "location": "Comilla",
-        "description": "Healthy dairy cow with good body condition.",
+        "description": "Healthy local breed cow in good physical condition.",
         "image": "https://ecdn.dhakatribune.net/contents/cache/images/640x359x1/uploads/media/2024/07/07/Brahman-829d632ac98a3ffe3f82671dc904c7a0.jpg?jadewits_media_id=23946",
         "category": "Large Animal"
     },
@@ -151,7 +151,7 @@
         "weight": 18,
         "age": 1,
         "location": "Barisal",
-        "description": "Small but healthy goat, budget-friendly option.",
+        "description": "Compact and healthy local goat, an excellent budget-friendly choice.",
         "image": "https://images.unsplash.com/photo-1524024973431-2ad916746881?auto=format&fit=crop&q=80&w=1000",
         "category": "Small Animal"
     }
