@@ -14,7 +14,7 @@ const Footer = () => {
         </section>
 
         {/* =========Contact section ================== */}
-        <section className="flex md:justify-end">
+        <section >
           <div>
             <h2 className="font-medium text-xl md:text-2xl">Contact info</h2>
             <p>Phone : +01787******</p>
@@ -24,7 +24,7 @@ const Footer = () => {
         </section>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7 pt-4 items-start text-left">
+      <div className="grid grid-cols-1 w-10/12 mx-auto sm:grid-cols-2 md:grid-cols-3 gap-10 pt-4 items-start text-left">
         {/* =========about section========= */}
         <div className="space-y-2">
           <p className="text-2xl md:text-3xl">About us</p>
@@ -36,7 +36,7 @@ const Footer = () => {
         </div>
 
         {/* ===========address ======== */}
-        <div className="space-y-2 grid md:justify-self-center">
+        <div className="space-y-2 grid sm:justify-items-start md:justify-center">
           <p className="text-2xl md:text-3xl">Address</p>
           <p>
             House 24, <br /> Road 10, <br /> Mirpur-10, <br /> Dhaka 1216
