@@ -1,5 +1,6 @@
 "use client";
 import { Button } from "@heroui/react";
+import Link from "next/link";
 
 
 export default function Home() {
@@ -72,9 +73,11 @@ export default function Home() {
                 Buy and sell healthy Eid-ul-Adha animals online with ease. Find trusted cows, goats, sheep, and more at the best prices — only on Eidhat 🐄🐐
               </p>
 
-              <Button>
-                browse
-              </Button>
+              <Link href="/allanimals">
+                <Button>
+                  browse Animals
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
