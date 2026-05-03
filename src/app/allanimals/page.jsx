@@ -2,6 +2,7 @@
 import Card from "@/components/card";
 import { Label, ListBox, Select } from "@heroui/react";
 import { useEffect, useState } from "react";
+import { Skeleton } from "@heroui/react";
 
 const Allanimals = () => {
   const [data, setData] = useState([]);
@@ -27,6 +28,21 @@ const Allanimals = () => {
 
   if (sort === "low-to-high") {
     sortData.sort((a, b) => a.price - b.price);
+  }
+
+  // loding
+
+  if (!sortData.length) {
+    return (
+      <div className="shadow-panel w-full space-y-5 rounded-lg bg-transparent p-4">
+        <Skeleton className="h-32 rounded-lg" />
+        <div className="space-y-3">
+          <Skeleton className="h-3 w-3/5 rounded-lg" />
+          <Skeleton className="h-3 w-4/5 rounded-lg" />
+          <Skeleton className="h-3 w-2/5 rounded-lg" />
+        </div>
+      </div>
+    );
   }
 
   return (

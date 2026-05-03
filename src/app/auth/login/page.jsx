@@ -1,9 +1,6 @@
 "use client";
 import { authClient } from "@/library/auth-client";
-import { Check } from "@gravity-ui/icons";
-import toast from "react-hot-toast";
-import { Eye, EyeSlash } from "@gravity-ui/icons";
-import { useState } from "react";
+import { Check, Eye, EyeSlash } from "@gravity-ui/icons";
 import {
   Button,
   Description,
@@ -12,64 +9,48 @@ import {
   Input,
   Label,
   TextField,
-  InputGroup,
-  Link,
 } from "@heroui/react";
-import { useRouter } from "next/navigation";
+import { Link } from "@heroui/react";
+import { useState } from "react";
+import toast from "react-hot-toast";
 
-const Signup = () => {
+const Login = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const router = useRouter();
+
   const onSubmit = async (e) => {
     e.preventDefault();
 
     const formData = new FormData(e.currentTarget);
     const userData = Object.fromEntries(formData.entries());
 
-    const { data, error } = await authClient.signUp.email({
-      name: userData.name,
-      email: userData.email,
-      password: userData.password,
-      image: userData.image,
+    const { data, error } = await authClient.signIn.email({
+      email: userData.email, // required
+      password: userData.password, // required
+      rememberMe: true,
+      callbackURL: "/",
     });
-
     if (error) {
       toast.error(error.message || "Something went wrong");
       return;
     }
-
-    toast.success("Account created successfully. 🎉");
-    router.push("/auth/login");
+    toast.success("Welcome to EIDHAT 🎉");
   };
+
   return (
-    <div className=" flex justify-center min-h-screen items-center ">
-      <div className="shadow-sm p-10 flex justify-center ">
-        <Form onSubmit={onSubmit} className="flex w-90 flex-col gap-4">
-          <div className="text-center mb-6 flex gap-4 flex-col">
-            <span className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent">
-              EIDHAT
-            </span>
-            <span className="text-2xl text-whit/30">Create Your Account</span>
-          </div>
-          <TextField isRequired className="w-full " name="name" type="text">
-            <Label>Name</Label>
-            <Input name="name" placeholder="Enter your name" />
-          </TextField>
-          <TextField name="image" className="w-full" type="text">
-            <Label>Image Link</Label>
-            <InputGroup>
-              <InputGroup.Input
-                name="image"
-                required
-                placeholder="https://"
-                className="w-full"
-              />
-            </InputGroup>
-          </TextField>
+    <div className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-gray-50">
+      <div className="w-full max-w-md bg-white rounded-xl shadow-md p-5 sm:p-7">
+        <div className="text-center mb-6 flex gap-4 flex-col">
+          <span className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent">
+            EIDHAT
+          </span>
+          <span className="text-2xl text-whit/30">Login to your account</span>
+        </div>
+
+        <Form onSubmit={onSubmit} className="flex flex-col gap-4">
           <TextField
             isRequired
-            type="email"
             name="email"
+            type="email"
             validate={(value) => {
               if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(value)) {
                 return "Please enter a valid email address";
@@ -127,23 +108,18 @@ const Signup = () => {
               Must be at least 8 characters with 1 uppercase and 1 number
             </Description>
           </TextField>
-          <div className="flex gap-2">
-            <Button type="submit">
+
+          <div className=" w-full pt-4">
+            <Button type="submit" className="w-full ">
               <Check />
-              Signup
-            </Button>
-            <Button type="reset" variant="secondary">
-              Reset
+              Login
             </Button>
           </div>
-          <hr className="w-ful py-2" />
+          <hr className="w-full pt-4" />
           <div className="text-center">
             <span>
-              Already have an account?
-              <Link className="pl-2" href="/auth/login">
-                {" "}
-                Log in
-              </Link>
+              New here?
+              <Link href="/auth/signup">Create an account</Link>
             </span>
           </div>
         </Form>
@@ -152,4 +128,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default Login;

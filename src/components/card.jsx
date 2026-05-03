@@ -1,7 +1,8 @@
-import { Button } from "@heroui/react";
 import Link from "next/link";
 
+
 const Card = ({ animal }) => {
+ 
   return (
     <section
       key={animal.id}

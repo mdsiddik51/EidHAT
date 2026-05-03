@@ -1,10 +1,25 @@
 "use client";
 import { useState } from "react";
-import { Button, Link } from "@heroui/react";
+import { Button, Link, Spinner, Avatar } from "@heroui/react";
+import { signOut, useSession } from "@/library/auth-client";
+
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
+
+  const { data, ispanding } = useSession();
+
+  if (ispanding) {
+    return (
+      <div className="flex items-center gap-4">
+        <Spinner />
+      </div>
+    );
+  }
+
+  const user = data?.user;
+  console.log(data)
+
   return (
     <div className="sticky top-4 z-40 w-11/12 mx-auto pb-6">
       <nav className="px-5 shadow-md  rounded-md bg-transparent border-2 border-green-500">
@@ -53,19 +68,43 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <div className="flex gap-2 ">
-            <Button
-              variant="tertiary"
-              className="hover:text-white hover:bg-green-500 transition-all duration-300"
-            >
-              Login
-            </Button>
-            <Button
-              variant="tertiary"
-              className="hover:text-white hover:bg-green-500 transition-all duration-300"
-            >
-              register{" "}
-            </Button>
+
+          <div>
+            {user ? (
+              <div className="flex gap-4 ">
+                <div className="flex items-center gap-4">
+                  <Avatar>
+                    <Avatar.Image
+                      alt={user.name}
+                      src={user.image}
+                    />
+                    <Avatar.Fallback>{user.name.slice(0, 2)}</Avatar.Fallback>
+                  </Avatar>
+                </div>
+                <div>
+                  <Button onClick={() => signOut()}>SignOut</Button>
+                </div>
+              </div>
+            ) : (
+              <div className="flex gap-2 ">
+                <Link href="/auth/login" style={{ textDecoration: "none" }}>
+                  <Button
+                    variant="tertiary"
+                    className="hover:text-white hover:bg-green-500 transition-all duration-300"
+                  >
+                    Login
+                  </Button>
+                </Link>
+                <Link href="/auth/signup" style={{ textDecoration: "none" }}>
+                  <Button
+                    variant="tertiary"
+                    className="hover:text-white  hover:bg-green-500 transition-all duration-300"
+                  >
+                    register
+                  </Button>
+                </Link>
+              </div>
+            )}
           </div>
         </header>
 
