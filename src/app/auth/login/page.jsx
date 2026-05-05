@@ -1,6 +1,7 @@
 "use client";
-import { authClient } from "@/library/auth-client";
+import { authClient } from "@/lib/auth-client";
 import { Check, Eye, EyeSlash } from "@gravity-ui/icons";
+import { FcGoogle } from "react-icons/fc";
 import {
   Button,
   Description,
@@ -31,9 +32,18 @@ const Login = () => {
     });
     if (error) {
       toast.error(error.message || "Something went wrong");
+      window.location.href = "/auth/signup";
       return;
     }
     toast.success("Welcome to EIDHAT 🎉");
+  };
+
+  // gogle auth
+
+  const handelgoogle = async () => {
+    await authClient.signIn.social({
+      provider: "google",
+    });
   };
 
   return (
@@ -115,8 +125,17 @@ const Login = () => {
               Login
             </Button>
           </div>
-          <hr className="w-full pt-4" />
-          <div className="text-center">
+          <div className=" relative">
+            <hr className="w-full pt-4" />
+            <span className=" absolute -top-3 left-50 bg-white">or</span>
+          </div>
+          <button onClick={handelgoogle}>
+            <div className="flex gap-2 border transition-all duration-500 hover:border-black justify-center rounded-md shadow-md bg-white items-center p-3">
+              <FcGoogle size={30} />
+              <h1> Login with Google</h1>
+            </div>
+          </button>
+          <div className="text-center pt-2">
             <span>
               New here?
               <Link href="/auth/signup">Create an account</Link>

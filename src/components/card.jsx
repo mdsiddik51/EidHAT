@@ -1,13 +1,16 @@
 import Link from "next/link";
 
 
-const Card = ({ animal }) => {
+const Card = ({ animal}) => {
+
+  
+  
  
   return (
     <section
-      key={animal.id}
+      key={animal.id }
       className="relative max-w-xs h-72 overflow-hidden rounded-3xl 
-             bg-white/5 backdrop-blur-md border border-white/10
+             bg-white/5  border border-white/10
              shadow-lg transition-all duration-500
              hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/40"
     >
@@ -31,11 +34,11 @@ const Card = ({ animal }) => {
 
         <Link href={`/allanimals/${animal.id}`}>
           <button
-            className="mt-3 w-full py-2 rounded-xl 
-                   bg-white/10 backdrop-blur-md border border-white/20
-                   text-white text-sm font-semibold
-                   hover:bg-white hover:text-black
-                   transition-all duration-300
+            className="mt-3 w-full py-2 rounded-xl  border
+                   text-black text-sm font-semibold
+                   hover:border-black  hover:text-black
+                   transition-all duration-300 bg-white
+                   cursor-pointer
                   "
           >
             View Details →

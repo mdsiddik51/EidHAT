@@ -1,19 +1,27 @@
-import { getData } from "@/library/data";
-import { Spinner } from "@heroui/react";
+import Button from "@/components/Button";
 
+import { getData } from "@/lib/data";
+import { Skeleton } from "@heroui/react";
 
 const AnimalDetails = async ({ params }) => {
   const { animalid } = await params;
-
   const Animals = await getData();
 
   const data = Animals.find((data) => data.id === parseInt(animalid));
-  console.log(data);
 
   if (!data) {
     return (
-      <div className="flex items-center gap-4">
-        <Spinner />
+      <div className="flex items-center w-full min-w-screen justify-center min-h-screen px-4">
+        <div className="shadow-panel rounded-lg bg-transparent p-4 h-full max-h-lg w-full max-w-lg space-y-5">
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Skeleton className="h-24 w-full sm:w-24 sm:h-24 rounded-lg" />
+            <div className="flex-1 space-y-3">
+              <Skeleton className="h-4 w-3/4 rounded-lg" />
+              <Skeleton className="h-4 w-full rounded-lg" />
+              <Skeleton className="h-4 w-5/6 rounded-lg" />
+            </div>
+          </div>
+        </div>
       </div>
     );
   } else {
@@ -89,10 +97,9 @@ const AnimalDetails = async ({ params }) => {
                 </p>
               </div>
 
-              <button className="w-full bg-linear-to-r from-[#4F39F6] to-[#9514FA] hover:text-black hover:scale-102  duration-500  text-white py-3 rounded-xl font-medium">
-                Booking
-              </button>
-              
+              <div>
+                <Button data={data}/>
+              </div>
             </div>
           </div>
         </div>

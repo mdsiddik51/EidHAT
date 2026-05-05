@@ -1,5 +1,5 @@
 "use client";
-import { authClient } from "@/library/auth-client";
+import { authClient } from "@/lib/auth-client";
 import { Check } from "@gravity-ui/icons";
 import toast from "react-hot-toast";
 import { Eye, EyeSlash } from "@gravity-ui/icons";
@@ -130,7 +130,7 @@ const Signup = () => {
           <div className="flex gap-2">
             <Button type="submit">
               <Check />
-              Signup
+              Register
             </Button>
             <Button type="reset" variant="secondary">
               Reset

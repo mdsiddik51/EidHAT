@@ -34,12 +34,48 @@ const Allanimals = () => {
 
   if (!sortData.length) {
     return (
-      <div className="shadow-panel w-full space-y-5 rounded-lg bg-transparent p-4">
-        <Skeleton className="h-32 rounded-lg" />
-        <div className="space-y-3">
-          <Skeleton className="h-3 w-3/5 rounded-lg" />
-          <Skeleton className="h-3 w-4/5 rounded-lg" />
-          <Skeleton className="h-3 w-2/5 rounded-lg" />
+      <div className="flex justify-center">
+        <div className="grid w-full max-w-xl  grid-cols-1 gap-6 sm:grid-cols-3 lg:grid-cols-4">
+          <div className="space-y-2">
+            <div className="shadow-panel space-y-3 rounded-lg bg-transparent p-4">
+              <Skeleton animationType="shimmer" className="h-20 rounded-lg" />
+              <Skeleton
+                animationType="shimmer"
+                className="h-3 w-3/5 rounded-lg"
+              />
+              <Skeleton
+                animationType="shimmer"
+                className="h-3 w-4/5 rounded-lg"
+              />
+            </div>
+          </div>
+          <div className="space-y-2">
+            <div className="shadow-panel space-y-3 rounded-lg bg-transparent p-4">
+              <Skeleton animationType="pulse" className="h-20 rounded-lg" />
+              <Skeleton
+                animationType="pulse"
+                className="h-3 w-3/5 rounded-lg"
+              />
+              <Skeleton
+                animationType="pulse"
+                className="h-3 w-4/5 rounded-lg"
+              />
+            </div>
+          </div>
+          <div className="space-y-2">
+            <div className="shadow-panel space-y-3 rounded-lg bg-transparent p-4">
+              <Skeleton animationType="none" className="h-20 rounded-lg" />
+              <Skeleton animationType="none" className="h-3 w-3/5 rounded-lg" />
+              <Skeleton animationType="none" className="h-3 w-4/5 rounded-lg" />
+            </div>
+          </div>
+          <div className="space-y-2">
+            <div className="shadow-panel space-y-3 rounded-lg bg-transparent p-4">
+              <Skeleton animationType="none" className="h-20 rounded-lg" />
+              <Skeleton animationType="none" className="h-3 w-3/5 rounded-lg" />
+              <Skeleton animationType="none" className="h-3 w-4/5 rounded-lg" />
+            </div>
+          </div>
         </div>
       </div>
     );

@@ -1,11 +1,15 @@
-
+import AnimalDetails from "@/app/allanimals/[animalid]/page";
+import { useSession } from "@/lib/auth-client";
 
 const Details = () => {
-    return (
-        <div>
+  const { data, ispanding } = useSession();
+  const user = data?.user;
 
-        </div>
-    );
+  return (
+    <div>
+      <AnimalDetails user={user} ispanding={ispanding} />
+    </div>
+  );
 };
 
 export default Details;

@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Button, Link, Spinner, Avatar } from "@heroui/react";
-import { signOut, useSession } from "@/library/auth-client";
+import { signOut, useSession } from "@/lib/auth-client";
 
 
 const Navbar = () => {
@@ -18,11 +18,16 @@ const Navbar = () => {
   }
 
   const user = data?.user;
-  console.log(data)
+
+  
+
+
+
 
   return (
     <div className="sticky top-4 z-40 w-11/12 mx-auto pb-6">
-      <nav className="px-5 shadow-md  rounded-md bg-transparent border-2 border-green-500">
+    
+      <nav className="px-5 shadow-md  rounded-md bg-transparent border-2 backdrop-blur-md border-green-500">
         <header className="flex h-16 items-center justify-between px-6">
           <div className="flex items-center gap-4">
             <button
