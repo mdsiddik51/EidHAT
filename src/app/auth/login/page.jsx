@@ -14,10 +14,11 @@ import {
 import { Link } from "@heroui/react";
 import { useState } from "react";
 import toast from "react-hot-toast";
+import { useRouter } from "next/navigation";
 
 const Login = () => {
   const [isVisible, setIsVisible] = useState(false);
-
+  const router = useRouter();
   const onSubmit = async (e) => {
     e.preventDefault();
 
@@ -32,7 +33,7 @@ const Login = () => {
     });
     if (error) {
       toast.error(error.message || "Something went wrong");
-      window.location.href = "/auth/signup";
+      router.push("/auth/signup");
       return;
     }
     toast.success("Welcome to EIDHAT 🎉");

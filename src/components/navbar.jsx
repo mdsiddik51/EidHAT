@@ -3,7 +3,6 @@ import { useState } from "react";
 import { Button, Link, Spinner, Avatar } from "@heroui/react";
 import { signOut, useSession } from "@/lib/auth-client";
 
-
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -19,14 +18,8 @@ const Navbar = () => {
 
   const user = data?.user;
 
-  
-
-
-
-
   return (
     <div className="sticky top-4 z-40 w-11/12 mx-auto pb-6">
-    
       <nav className="px-5 shadow-md  rounded-md bg-transparent border-2 backdrop-blur-md border-green-500">
         <header className="flex h-16 items-center justify-between px-6">
           <div className="flex items-center gap-4">
@@ -60,7 +53,9 @@ const Navbar = () => {
               </svg>
             </button>
 
-            <div className="font-bold font-3xl">EIDHAT</div>
+            <div className="text-2xl md:text-3xl font-black bg-gradient-to-r from-blue-500 to-indigo-600 bg-clip-text text-transparent tracking-wider">
+              EIDHAT
+            </div>
           </div>
 
           <div>
@@ -71,6 +66,9 @@ const Navbar = () => {
               <li>
                 <Link href="/allanimals">All Animals</Link>
               </li>
+              <li>
+                <Link href="/profile">My Profile</Link>
+              </li>
             </ul>
           </div>
 
@@ -79,15 +77,17 @@ const Navbar = () => {
               <div className="flex gap-4 ">
                 <div className="flex items-center gap-4">
                   <Avatar>
-                    <Avatar.Image
-                      alt={user.name}
-                      src={user.image}
-                    />
+                    <Avatar.Image alt={user.name} src={user.image} />
                     <Avatar.Fallback>{user.name.slice(0, 2)}</Avatar.Fallback>
                   </Avatar>
                 </div>
                 <div>
-                  <Button onClick={() => signOut()}>SignOut</Button>
+                  <Button
+                    onClick={() => signOut()}
+                    className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-semibold py-2 px-6 rounded-lg shadow-md transition-all duration-300"
+                  >
+                    SignOut
+                  </Button>
                 </div>
               </div>
             ) : (
@@ -95,7 +95,7 @@ const Navbar = () => {
                 <Link href="/auth/login" style={{ textDecoration: "none" }}>
                   <Button
                     variant="tertiary"
-                    className="hover:text-white hover:bg-green-500 transition-all duration-300"
+                    className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-semibold py-2 px-6 rounded-lg shadow-md transition-all duration-300"
                   >
                     Login
                   </Button>
@@ -103,7 +103,7 @@ const Navbar = () => {
                 <Link href="/auth/signup" style={{ textDecoration: "none" }}>
                   <Button
                     variant="tertiary"
-                    className="hover:text-white  hover:bg-green-500 transition-all duration-300"
+                    className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-semibold py-2 px-6 rounded-lg shadow-md transition-all duration-300"
                   >
                     register
                   </Button>
@@ -121,6 +121,9 @@ const Navbar = () => {
               </li>
               <li>
                 <Link href="/allanimals">All Animals</Link>
+              </li>
+              <li>
+                <Link href="/profile"> My Profile</Link>
               </li>
             </ul>
           </div>

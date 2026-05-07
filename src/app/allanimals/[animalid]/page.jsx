@@ -1,5 +1,4 @@
-import Button from "@/components/Button";
-
+import BookingButton from "@/components/Button";
 import { getData } from "@/lib/data";
 import { Skeleton } from "@heroui/react";
 
@@ -98,7 +97,7 @@ const AnimalDetails = async ({ params }) => {
               </div>
 
               <div>
-                <Button data={data}/>
+                <BookingButton />
               </div>
             </div>
           </div>
