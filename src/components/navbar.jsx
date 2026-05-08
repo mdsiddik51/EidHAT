@@ -53,7 +53,7 @@ const Navbar = () => {
               </svg>
             </button>
 
-            <div className="text-2xl md:text-3xl font-black bg-gradient-to-r from-blue-500 to-indigo-600 bg-clip-text text-transparent tracking-wider">
+            <div className="text-xl md:text-2xl font-black bg-linear-to-r from-blue-500 to-indigo-600 bg-clip-text text-transparent tracking-wider">
               EIDHAT
             </div>
           </div>
@@ -84,7 +84,7 @@ const Navbar = () => {
                 <div>
                   <Button
                     onClick={() => signOut()}
-                    className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-semibold py-2 px-6 rounded-lg shadow-md transition-all duration-300"
+                    className="bg-linear-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition-all duration-300"
                   >
                     SignOut
                   </Button>
@@ -95,7 +95,7 @@ const Navbar = () => {
                 <Link href="/auth/login" style={{ textDecoration: "none" }}>
                   <Button
                     variant="tertiary"
-                    className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-semibold py-2 px-6 rounded-lg shadow-md transition-all duration-300"
+                    className="bg-linear-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition-all duration-300"
                   >
                     Login
                   </Button>
@@ -103,7 +103,7 @@ const Navbar = () => {
                 <Link href="/auth/signup" style={{ textDecoration: "none" }}>
                   <Button
                     variant="tertiary"
-                    className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-semibold py-2 px-6 rounded-lg shadow-md transition-all duration-300"
+                    className="bg-linear-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition-all duration-300"
                   >
                     register
                   </Button>

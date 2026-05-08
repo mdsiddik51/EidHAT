@@ -1,0 +1,104 @@
+{
+  "animals": [
+    {
+      "name": "Angus Cow",
+      "price": "৳180,000",
+      "img": "/images/angus.png",
+      "alt": "Angus Cow for Qurbani",
+      "tag": "Premium",
+      "weight": "450-550 kg"
+    },
+    {
+      "name": "Hereford Bull",
+      "price": "৳220,000",
+      "img": "/images/hereford.png",
+      "alt": "Hereford Bull for Qurbani",
+      "tag": "Best Seller",
+      "weight": "500-600 kg"
+    },
+    {
+      "name": "Boer Goat",
+      "price": "৳90,000",
+      "img": "/images/boer-goat.png",
+      "alt": "Boer Goat for Qurbani",
+      "tag": "Limited",
+      "weight": "35-45 kg"
+    },
+    {
+      "name": "Dorper Sheep",
+      "price": "৳110,000",
+      "img": "/images/dorper-sheep.png",
+      "alt": "Dorper Sheep for Qurbani",
+      "tag": "New",
+      "weight": "40-50 kg"
+    }
+  ],
+  "breed": [
+    {
+      "name": "Red Chittagong",
+      "price": "৳80,000 - ৳180,000",
+      "description": "Native breed known for hardiness",
+      "popularity": "92%",
+      "icon": "🐂"
+    },
+    {
+      "name": "Pabna / Sirajganj",
+      "price": "৳90,000 - ৳200,000",
+      "description": "Excellent meat quality",
+      "popularity": "88%",
+      "icon": "🐄"
+    },
+    {
+      "name": "Mirkadim White",
+      "price": "৳100,000 - ৳220,000",
+      "description": "Premium white breed",
+      "popularity": "85%",
+      "icon": "🐏"
+    },
+    {
+      "name": "Brahman / Crossbreed",
+      "price": "৳150,000 - ৳400,000+",
+      "description": "Large frame, high meat yield",
+      "popularity": "95%",
+      "icon": "🐃"
+    }
+  ],
+  "tips": [
+    {
+      "title": "Healthy Animal",
+      "description": "Choose active and disease-free animals with bright eyes and clean nose.",
+      "icon": "🏥",
+      "color": "from-green-500 to-emerald-600"
+    },
+    {
+      "title": "Proper Age",
+      "description": "Cow (2+ years), Goat/Sheep (1+ year). Check teeth for age verification.",
+      "icon": "📅",
+      "color": "from-blue-500 to-cyan-600"
+    },
+    {
+      "title": "No Defects",
+      "description": "Avoid animals with injuries, illness, or missing body parts.",
+      "icon": "✨",
+      "color": "from-purple-500 to-pink-600"
+    },
+    {
+      "title": "Weight Check",
+      "description": "Verify weight before purchase to ensure fair pricing.",
+      "icon": "⚖️",
+      "color": "from-orange-500 to-red-600"
+    },
+    {
+      "title": "Vaccination",
+      "description": "Ask for vaccination records to ensure animal health.",
+      "icon": "💉",
+      "color": "from-teal-500 to-green-600"
+    },
+    {
+      "title": "Market Price",
+      "description": "Compare prices across multiple sellers before buying.",
+      "icon": "📊",
+      "color": "from-indigo-500 to-purple-600"
+    }
+  ]
+}

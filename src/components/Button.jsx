@@ -25,7 +25,7 @@ function BookingButton() {
     <div>
       <Button
         onClick={bookClick}
-        className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white py-6 font-bold px-8 w-full rounded-lg shadow-md transition-all duration-300"
+        className="bg-linear-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white py-6 font-bold px-8 w-full rounded-lg shadow-md transition-all duration-300"
       >
         Booking
       </Button>

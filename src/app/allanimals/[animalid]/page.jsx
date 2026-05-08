@@ -55,35 +55,34 @@ const AnimalDetails = async ({ params }) => {
               <div className="grid grid-cols-2 gap-3 text-sm">
                 <div className="bg-gray-50 p-3 rounded-lg border border-gray-100">
                   <p className="text-gray-500">
-                    <span className="font-medium text-gray-700">Type:</span>{" "}
+                    <span className="font-medium text-gray-700">Type:</span>
                     <span className="text-gray-900">{data.type}</span>
                   </p>
                 </div>
 
                 <div className="bg-gray-50 p-3 rounded-lg border border-gray-100">
                   <p className="text-gray-500">
-                    <span className="font-medium text-gray-700">Breed:</span>{" "}
+                    <span className="font-medium text-gray-700">Breed:</span>
                     <span className="text-gray-900">{data.breed}</span>
                   </p>
                 </div>
 
                 <div className="bg-gray-50 p-3 rounded-lg border border-gray-100">
                   <p className="text-gray-500">
-                    <span className="font-medium text-gray-700">Age:</span>{" "}
-                    <span className="text-gray-900">{data.age} Years</span>
+                    <span className="font-medium text-gray-700">Age:</span>
                   </p>
                 </div>
 
                 <div className="bg-gray-50 p-3 rounded-lg border border-gray-100">
                   <p className="text-gray-500">
-                    <span className="font-medium text-gray-700">Weight:</span>{" "}
+                    <span className="font-medium text-gray-700">Weight:</span>
                     <span className="text-gray-900">{data.weight} Kg</span>
                   </p>
                 </div>
 
                 <div className="bg-gray-50 p-3 rounded-lg border border-gray-100 col-span-2">
                   <p className="text-gray-500">
-                    <span className="font-medium text-gray-700">Location:</span>{" "}
+                    <span className="font-medium text-gray-700">Location:</span>
                     <span className="text-gray-900">{data.location}</span>
                   </p>
                 </div>

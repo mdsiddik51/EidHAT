@@ -1,65 +1,112 @@
+"use client";
+
+import React from "react";
+
 const Footer = () => {
   return (
-    <div className="w-11/12 mx-auto  bg-[#14532D] p-8 rounded-md">
-      <div className="flex flex-col md:flex-row justify-between gap-6">
-        <section>
-          <div>
-            <span className="text-4xl md:text-5xl font-bold pb-7 bg-gradient-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent">
-              EIDHAT
-            </span>
-            <p className="font-medium text-xl md:text-2xl pt-2 text-black ">
-              Qurbani Animal Marketplace
-            </p>
-          </div>
-        </section>
+    <footer className="bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 text-white pt-16 pb-8 px-6">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="space-y-5">
+          <div className="flex items-center gap-3">
+            <div className="h-14 w-14 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center shadow-lg">
+              <span className="text-3xl">🐄</span>
+            </div>
 
-        {/* =========Contact section ================== */}
-        <section >
-          <div>
-            <h2 className="font-medium text-xl md:text-2xl">Contact info</h2>
-            <p>Phone : +01787******</p>
-            <p>Phone : +01942******</p>
-            <p>Email : email@eidhat.com</p>
+            <div>
+              <h2 className="text-3xl font-black tracking-tight">EIDHAT</h2>
+              <p className="text-sm text-white/80">
+                Premium Qurbani Marketplace
+              </p>
+            </div>
           </div>
-        </section>
-      </div>
 
-      <div className="grid grid-cols-1 w-10/12 mx-auto sm:grid-cols-2 md:grid-cols-3 gap-10 pt-4 items-start text-left">
-        {/* =========about section========= */}
-        <div className="space-y-2">
-          <p className="text-2xl md:text-3xl">About us</p>
-          <p className="font-medium text-black/30">
-            A trusted platform to find healthy and verified animals for Qurbani
-            across Bangladesh. We connect buyers with farmers and dealers to
-            ensure fair price and quality livestock.
+          <p className="text-sm leading-relaxed text-white/80 max-w-sm">
+            Buy and sell healthy cows, goats, sheep, and camels online with
+            trusted sellers across Bangladesh.
           </p>
         </div>
 
-        {/* ===========address ======== */}
-        <div className="space-y-2 grid sm:justify-items-start md:justify-center">
-          <p className="text-2xl md:text-3xl">Address</p>
-          <p>
-            House 24, <br /> Road 10, <br /> Mirpur-10, <br /> Dhaka 1216
-          </p>
-        </div>
+        <div>
+          <h3 className="text-xl font-bold mb-5">Social links</h3>
 
-        {/* =========social Links ============ */}
-        <div className="space-y-2 grid Md:justify-end">
-          <p className="text-2xl md:text-3xl">Social links</p>
-          <ul className="space-y-1">
+          <ul className="space-y-3 text-white/80">
             <li>
-              <a href="">Fackbook</a>
+              <a href="#" className="hover:text-white transition-colors">
+                Facebook
+              </a>
             </li>
+
             <li>
-              <a href="">Instagram</a>
+              <a href="#" className="hover:text-white transition-colors">
+                twitter
+              </a>
             </li>
+
             <li>
-              <a href="">Whatsapp</a>
+              <a href="#" className="hover:text-white transition-colors">
+                instagram
+              </a>
             </li>
           </ul>
         </div>
+
+        <div>
+          <h3 className="text-xl font-bold mb-5">About</h3>
+
+          <ul className="space-y-3 text-white/80">
+            <li>
+              <div>
+                <h3 className="text-xl font-bold text-white mb-2">
+                  Healthy Animals
+                </h3>
+                <p className="text-white text-sm">
+                  Verified and healthy Qurbani animals from trusted sellers
+                  across Bangladesh.
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <div>
+                <h3 className="text-xl font-bold text-white mb-2">
+                  Trusted Platform
+                </h3>
+                <p className="text-white text-sm">
+                  Safe and reliable marketplace with transparent pricing and
+                  secure booking.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-bold mb-5">Contact Info</h3>
+
+          <div className="space-y-4 text-white/80">
+            <p>📍 Rangpur, Bangladesh</p>
+            <p>📧 support@eidhat.com</p>
+            <p>📞 +880 1234-567890</p>
+
+            <div className="rounded-2xl bg-white/10 backdrop-blur-md p-4 mt-5 border border-white/10">
+              <p className="font-semibold text-white mb-1">Eid-ul-Adha 2026</p>
+
+              <p className="text-sm text-white/70">
+                Trusted marketplace for your blessed Qurbani.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+
+      <div className="border-t border-white/15 mt-14 pt-6 text-center text-sm text-white/70">
+        <p>© {new Date().getFullYear()} EIDHAT. All rights reserved.</p>
+
+        <p className="mt-2">
+          Made with <span className="text-red-300">♥</span> in Bangladesh
+        </p>
+      </div>
+    </footer>
   );
 };
 
