@@ -29,27 +29,29 @@ const Profile = () => {
       return;
     }
     toast.success("Account Update successfully. 🎉");
-
   };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
       <div className="w-full max-w-md bg-white shadow-lg rounded-2xl p-8">
-        <h2 className="text-3xl text-center bg-gradient-to-r from-blue-500 to-indigo-600 bg-clip-text text-transparent font-bold tracking-wide mb-8">
+        <h2 className="text-3xl text-center bg-linear-to-r from-blue-500 to-indigo-600 bg-clip-text text-transparent font-bold tracking-wide mb-8">
           My Profile
         </h2>
 
         <div className="flex flex-col items-center text-center gap-4">
-          <div className="p-[3px] rounded-full bg-gradient-to-r from-blue-500 to-indigo-600">
+          <div className="p-0.75 rounded-full bg-linear-to-r from-blue-500 to-indigo-600">
             <Avatar className="w-28 h-28 bg-white rounded-full">
-              <Avatar.Image alt={User?.name} src={User?.image} />
+              <Avatar.Image
+                className="w-full h-full object-cover"
+                alt={User?.name}
+                src={User?.image}
+              />
               <Avatar.Fallback>{User?.name.slice(0, 2)}</Avatar.Fallback>
             </Avatar>
           </div>
 
           <div>
             <h3 className="text-xl font-semibold text-gray-800">
-              {" "}
               {User?.name}
             </h3>
             <p className="text-gray-500">{User?.email}</p>

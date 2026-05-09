@@ -1,36 +1,93 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🐄 EIDHAT
 
-## Getting Started
+> A modern Qurbani animal booking platform built with Next.js 🚀
 
-First, run the development server:
+---
+
+## 📌 Purpose
+
+EIDHAT is a modern and user-friendly Qurbani animal booking platform where users can easily browse animals, view detailed information, and book their preferred animal online.
+
+---
+
+## 🌐 Live Website
+
+🔗 https://eid-hat.vercel.app/
+
+---
+
+## ✨ Key Features
+
+- ✅ Browse animals with a modern experience  
+- ✅ View full information about each animal  
+- ✅ Modern and responsive UI  
+- ✅ Secure user authentication  
+- ✅ Easy booking form system  
+- ✅ Profile update functionality  
+- ✅ Loading skeletons for better UX  
+- ✅ Fully mobile responsive navigation  
+
+---
+## 🛠️ Tech Stack
+
+- ⚡ Next.js
+- 🎨 Tailwind CSS
+- 🧩 HeroUI
+- 🍃 MongoDB
+- ▲ Vercel
+
+---
+
+## 📦 NPM Packages Used
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+nextjs
+tailwindcss
+@heroui/react
+react-hot-toast
+@gravity-ui/icons
+better-auth
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 📁 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+├── app
+│   ├── page.jsx
+│   ├── allanimals
+│   ├── profile
+│   ├── booking
+│   └── api
+│
+├── components
+│   ├── Navbar.jsx
+│   ├── Footer.jsx
+│   ├── Card.jsx
+│   └── LoadingSkeleton.jsx
+│
+├── public
+│   ├── images
+│   └── animal.json
+│
+├── lib
+│   └── auth-client.js
+│
+├── styles
+│   └── globals.css
+│
+└── package.json
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🖼️ Website Preview
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+![EIDHAT Screenshot](./public/home.png)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 👨‍💻 Author
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+➡️ Md Siddik

@@ -84,7 +84,7 @@ const Allanimals = () => {
   return (
     <div className="w-11/12 mx-auto pt-7 pb-7">
       <div className="text-center pb-5">
-        <h2 className="text-4xl font-bold">all animals in one place</h2>
+        <h2 className="text-4xl font-bold">All animals in one place</h2>
       </div>
 
       {/* ==========Sort Select form heroui============== */}

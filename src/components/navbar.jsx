@@ -21,8 +21,8 @@ const Navbar = () => {
   return (
     <div className="sticky top-4 z-40 w-11/12 mx-auto pb-6">
       <nav className="px-5 shadow-md  rounded-md bg-transparent border-2 backdrop-blur-md border-green-500">
-        <header className="flex h-16 items-center justify-between px-6">
-          <div className="flex items-center gap-4">
+        <header className="flex h-16 items-center justify-between px-1 md:px-6">
+          <div className="flex items-center gap-1 md:gap-4">
             <button
               className="md:hidden"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -52,9 +52,16 @@ const Navbar = () => {
                 )}
               </svg>
             </button>
+            <div className="flex items-center  gap-2">
+              <img
+                 src="/images/logo.png"
+                alt="EIDHAT Logo"
+                className="w-10 h-10"
+              />
 
-            <div className="text-xl md:text-2xl font-black bg-linear-to-r from-blue-500 to-indigo-600 bg-clip-text text-transparent tracking-wider">
-              EIDHAT
+              <h1 className="text-xl md:text-2xl font-black bg-linear-to-r from-blue-500 to-indigo-600 bg-clip-text text-transparent tracking-wider">
+                EIDHAT
+              </h1>
             </div>
           </div>
 
@@ -75,9 +82,9 @@ const Navbar = () => {
           <div>
             {user ? (
               <div className="flex gap-4 ">
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-4 shadow-md rounded-full">
                   <Avatar>
-                    <Avatar.Image alt={user.name} src={user.image} />
+                    <Avatar.Image  className="w-full h-full object-cover" alt={user.name} src={user.image} />
                     <Avatar.Fallback>{user.name.slice(0, 2)}</Avatar.Fallback>
                   </Avatar>
                 </div>

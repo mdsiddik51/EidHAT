@@ -26,77 +26,77 @@ const AnimalDetails = async ({ params }) => {
   } else {
     return (
       <section className="w-11/12 mx-auto py-8">
-        <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
-            <div className="relative bg-linear-to-r from-green-50 to-white p-5 flex items-center justify-center">
-              <div className="w-full h-90 overflow-hidden rounded-xl shadow-md relative">
-                <span className="absolute top-4 left-4 z-10 bg-green-600/90 backdrop-blur-sm text-white text-xs px-3 py-1 rounded-full capitalize shadow-md">
-                  {data.category}
-                </span>
-
+        <div className="bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-xl">
+          <div className="grid lg:grid-cols-[1fr_1.1fr] items-center">
+            <div className="relative p-4 lg:p-5">
+              <div className="relative h-[300px] sm:h-[380px] lg:h-[500px] overflow-hidden rounded-2xl">
                 <img
                   src={data.image}
-                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                  alt={data.name}
+                  className="w-full h-full object-cover"
                 />
+
+                <div className="absolute top-4 left-4">
+                  <span
+                    className={`rounded-full px-4 py-1.5 text-xs font-bold text-white shadow-lg ${
+                      data.type === "Cow"
+                        ? "bg-linear-to-r from-sky-400 to-blue-700"
+                        : data.type === "Camel" ? "bg-linear-to-r from-yellow-200 via-amber-300 to-orange-400" : "bg-linear-to-r from-emerald-500 to-green-600"
+                    }`}
+                  >{data.type}</span>
+                </div>
               </div>
             </div>
 
-            <div className="p-6 lg:p-8 flex flex-col justify-center space-y-5">
-              <div>
-                <h1 className="text-3xl font-bold text-gray-900">
+            <div className="p-6 lg:p-8 space-y-6">
+              <div className="space-y-3">
+                <div className="inline-flex items-center gap-2 rounded-full bg-green-100 px-4 py-1.5 text-sm font-semibold text-green-700">
+                  Premium Qurbani Animal
+                </div>
+
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 leading-tight">
                   {data.name}
                 </h1>
 
-                <p className="text-gray-500 mt-2 text-sm leading-relaxed">
+                <p className="text-gray-600 leading-relaxed text-sm sm:text-base max-w-xl">
                   {data.description}
                 </p>
               </div>
 
-              <div className="grid grid-cols-2 gap-3 text-sm">
-                <div className="bg-gray-50 p-3 rounded-lg border border-gray-100">
-                  <p className="text-gray-500">
-                    <span className="font-medium text-gray-700">Type:</span>
-                    <span className="text-gray-900">{data.type}</span>
-                  </p>
+              <div className="grid grid-cols-2 gap-3">
+                <div className="rounded-2xl border border-gray-100 bg-gray-50 p-4">
+                  <p className="text-xs text-gray-500 mb-1">Category</p>
+                  <h3 className="font-bold text-gray-900">{data.category}</h3>
                 </div>
 
-                <div className="bg-gray-50 p-3 rounded-lg border border-gray-100">
-                  <p className="text-gray-500">
-                    <span className="font-medium text-gray-700">Breed:</span>
-                    <span className="text-gray-900">{data.breed}</span>
-                  </p>
+                <div className="rounded-2xl border border-gray-100 bg-gray-50 p-4">
+                  <p className="text-xs text-gray-500 mb-1">Breed</p>
+                  <h3 className="font-bold text-gray-900">{data.breed}</h3>
                 </div>
 
-                <div className="bg-gray-50 p-3 rounded-lg border border-gray-100">
-                  <p className="text-gray-500">
-                    <span className="font-medium text-gray-700">Age:</span>
-                  </p>
+                <div className="rounded-2xl border border-gray-100 bg-gray-50 p-4">
+                  <p className="text-xs text-gray-500 mb-1">Weight</p>
+                  <h3 className="font-bold text-gray-900">{data.weight} Kg</h3>
                 </div>
 
-                <div className="bg-gray-50 p-3 rounded-lg border border-gray-100">
-                  <p className="text-gray-500">
-                    <span className="font-medium text-gray-700">Weight:</span>
-                    <span className="text-gray-900">{data.weight} Kg</span>
-                  </p>
-                </div>
-
-                <div className="bg-gray-50 p-3 rounded-lg border border-gray-100 col-span-2">
-                  <p className="text-gray-500">
-                    <span className="font-medium text-gray-700">Location:</span>
-                    <span className="text-gray-900">{data.location}</span>
-                  </p>
+                <div className="rounded-2xl border border-gray-100 bg-gray-50 p-4">
+                  <p className="text-xs text-gray-500 mb-1">Location</p>
+                  <h3 className="font-bold text-gray-900">{data.location}</h3>
                 </div>
               </div>
 
-              <div>
-                <p className="text-sm text-gray-500">Price</p>
-                <p className="text-3xl font-extrabold text-green-600">
-                  ৳ {data.price.toLocaleString()}
-                </p>
-              </div>
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5 pt-2">
+                <div>
+                  <p className="text-sm text-gray-500 mb-1">Price</p>
 
-              <div>
-                <BookingButton />
+                  <h2 className="text-4xl font-black text-green-600">
+                    ৳ {data.price.toLocaleString()}
+                  </h2>
+                </div>
+
+                <div className="w-full sm:w-auto">
+                  <BookingButton />
+                </div>
               </div>
             </div>
           </div>

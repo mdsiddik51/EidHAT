@@ -29,14 +29,18 @@ const Login = () => {
       email: userData.email, // required
       password: userData.password, // required
       rememberMe: true,
-      callbackURL: "/",
     });
     if (error) {
       toast.error(error.message || "Something went wrong");
-      router.push("/auth/signup");
+      setTimeout(() => {
+        router.push("/auth/signup");
+      }, 1200);
       return;
     }
-    toast.success("Welcome to EIDHAT 🎉");
+    setTimeout(() => {
+      toast.success("Welcome to EIDHAT 🎉");
+      router.push("/");
+    }, 1200);
   };
 
   // gogle auth
@@ -51,7 +55,7 @@ const Login = () => {
     <div className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-gray-50">
       <div className="w-full max-w-md bg-white rounded-xl shadow-md p-5 sm:p-7">
         <div className="text-center mb-6 flex gap-4 flex-col">
-          <span className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent">
+          <span className="text-2xl sm:text-3xl md:text-4xl font-bold bg-linear-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent">
             EIDHAT
           </span>
           <span className="text-2xl text-whit/30">Login to your account</span>

@@ -3,8 +3,9 @@
 import React from "react";
 
 const Footer = () => {
+  // footer from sera ui
   return (
-    <footer className="bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 text-white pt-16 pb-8 px-6">
+    <footer className="bg-linear-to-r from-blue-500 via-indigo-500 to-purple-500 text-white pt-16 pb-8 px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
         <div className="space-y-5">
           <div className="flex items-center gap-3">
@@ -100,10 +101,10 @@ const Footer = () => {
       </div>
 
       <div className="border-t border-white/15 mt-14 pt-6 text-center text-sm text-white/70">
-        <p>© {new Date().getFullYear()} EIDHAT. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} EIDHAT.</p>
 
         <p className="mt-2">
-          Made with <span className="text-red-300">♥</span> in Bangladesh
+          Premium Qurbani Animals • Trusted Sellers • Easy Booking
         </p>
       </div>
     </footer>

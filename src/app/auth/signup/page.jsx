@@ -46,7 +46,7 @@ const Signup = () => {
       <div className="shadow-sm p-10 flex justify-center ">
         <Form onSubmit={onSubmit} className="flex w-90 flex-col gap-4">
           <div className="text-center mb-6 flex gap-4 flex-col">
-            <span className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent">
+            <span className="text-2xl sm:text-3xl md:text-4xl font-bold bg-linear-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent">
               EIDHAT
             </span>
             <span className="text-2xl text-whit/30">Create Your Account</span>
@@ -141,7 +141,7 @@ const Signup = () => {
             <span>
               Already have an account?
               <Link className="pl-2" href="/auth/login">
-                {" "}
+               
                 Log in
               </Link>
             </span>

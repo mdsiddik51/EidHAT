@@ -7,7 +7,7 @@ const Home = async () => {
   const data = await animalData();
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 overflow-hidden">
+    <main className="min-h-screen bg-linear-to-br from-slate-50 via-white to-blue-50 overflow-hidden">
       <div className="w-11/12 mx-auto pt-4 pb-10 relative">
         <section className="relative mb-16 lg:mb-24  ">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -22,7 +22,7 @@ const Home = async () => {
 
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-tight">
                 Welcome to
-                <span className="bg-gradient-to-r from-blue-500 to-indigo-600 bg-clip-text text-transparent block">
+                <span className="bg-linear-to-r from-blue-500 to-indigo-600 bg-clip-text text-transparent block">
                   EIDHAT
                 </span>
               </h1>
@@ -37,7 +37,7 @@ const Home = async () => {
                 <Link href="/allanimals">
                   <Button
                     size="lg"
-                    className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:opacity-90 text-white font-bold px-6 sm:px-8 shadow-xl hover:shadow-2xl transition-all duration-300 w-full sm:w-auto"
+                    className="bg-linear-to-r from-blue-500 to-indigo-600 hover:opacity-90 text-white font-bold px-6 sm:px-8 shadow-xl hover:shadow-2xl transition-all duration-300 w-full sm:w-auto"
                   >
                     Browse Animals →
                   </Button>
@@ -97,8 +97,8 @@ const Home = async () => {
 
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-black mb-4">
               Featured
-              <span className="bg-gradient-to-r from-blue-500 to-indigo-600 bg-clip-text text-transparent">
-                
+              <span className="bg-linear-to-r from-blue-500 to-indigo-600 bg-clip-text text-transparent">
+
                 Animals
               </span>
             </h2>
@@ -115,7 +115,7 @@ const Home = async () => {
                 className="group relative bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-3"
               >
                 <div className="absolute top-4 left-4 z-10">
-                  <span className="px-3 py-1 rounded-full text-xs font-bold text-white shadow-lg bg-gradient-to-r from-blue-500 to-indigo-600">
+                  <span className="px-3 py-1 rounded-full text-xs font-bold text-white shadow-lg bg-linear-to-r from-blue-500 to-indigo-600">
                     {animal.tag}
                   </span>
                 </div>
@@ -130,7 +130,7 @@ const Home = async () => {
                     priority={index < 2}
                   />
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-linear-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
 
                 <div className="p-5">
@@ -164,7 +164,7 @@ const Home = async () => {
         </section>
 
         <section className="py-16 sm:py-20 my-10 relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-50 via-indigo-50 to-blue-50 rounded-3xl -z-10"></div>
+          <div className="absolute inset-0 bg-linear-to-r from-blue-50 via-indigo-50 to-blue-50 rounded-3xl -z-10"></div>
 
           <div className="max-w-6xl mx-auto px-2 sm:px-6">
             <div className="text-center mb-10 sm:mb-12">
@@ -178,8 +178,8 @@ const Home = async () => {
 
               <h2 className="text-4xl sm:text-5xl md:text-6xl font-black mb-4">
                 Qurbani
-                <span className="bg-gradient-to-r from-blue-500 to-indigo-600 bg-clip-text text-transparent">
-                  
+                <span className="bg-linear-to-r from-blue-500 to-indigo-600 bg-clip-text text-transparent">
+
                   Tips
                 </span>
               </h2>
@@ -195,7 +195,7 @@ const Home = async () => {
                   key={tip.title}
                   className="group relative bg-white/90 backdrop-blur-sm p-5 sm:p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
+                  <div className="absolute inset-0 bg-linear-to-r from-blue-500 to-indigo-600 rounded-2xl opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
 
                   <div className="relative">
                     <div className="text-4xl sm:text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -222,7 +222,7 @@ const Home = async () => {
 
         <section className="py-16 sm:py-20" aria-label="Top breeds">
           <div className="text-center mb-10 sm:mb-12">
-            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-4 py-2 rounded-full mb-4 shadow-lg">
+            <div className="inline-flex items-center gap-2 bg-linear-to-r from-blue-500 to-indigo-600 text-white px-4 py-2 rounded-full mb-4 shadow-lg">
               <span>🏆</span>
 
               <span className="font-semibold text-sm">
@@ -232,8 +232,8 @@ const Home = async () => {
 
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-black mb-4">
               Top
-              <span className="bg-gradient-to-r from-blue-500 to-indigo-600 bg-clip-text text-transparent">
-                
+              <span className="bg-linear-to-r from-blue-500 to-indigo-600 bg-clip-text text-transparent">
+
                 Breeds
               </span>
             </h2>
@@ -249,7 +249,7 @@ const Home = async () => {
                 key={breedItem.name}
                 className="group relative bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-3"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl blur-xl"></div>
+                <div className="absolute inset-0 bg-linear-to-r from-blue-500 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl blur-xl"></div>
 
                 <div className="relative bg-white p-5 sm:p-6 rounded-2xl">
                   <div className="text-center">
@@ -276,7 +276,7 @@ const Home = async () => {
                       </div>
 
                       <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
-                        <div className="h-full w-[90%] bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full transition-all duration-1000"></div>
+                        <div className="h-full w-[90%] bg-linear-to-r from-blue-500 to-indigo-600 rounded-full transition-all duration-1000"></div>
                       </div>
                     </div>
                   </div>
@@ -286,7 +286,7 @@ const Home = async () => {
           </div>
         </section>
       </div >
-    </div >
+    </main >
   );
 };
 
