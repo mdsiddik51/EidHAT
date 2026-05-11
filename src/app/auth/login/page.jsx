@@ -134,19 +134,23 @@ const Login = () => {
             <hr className="w-full pt-4" />
             <span className=" absolute -top-3 left-50 bg-white">or</span>
           </div>
-          <button onClick={handelgoogle}>
+        </Form>
+        <div className="flex justify-center  pt-4">
+          <button className="w-full" onClick={handelgoogle}>
             <div className="flex gap-2 border transition-all duration-500 hover:border-black justify-center rounded-md shadow-md bg-white items-center p-3">
               <FcGoogle size={30} />
               <h1> Login with Google</h1>
             </div>
           </button>
-          <div className="text-center pt-2">
-            <span>
-              New here?
-              <Link href="/auth/signup">Create an account</Link>
-            </span>
-          </div>
-        </Form>
+        </div>
+        <div className="text-center pt-6">
+          <span>
+            New here?
+            <Link href="/auth/signup">
+              <span className="pl-2"> Create an account</span>
+            </Link>
+          </span>
+        </div>
       </div>
     </div>
   );
